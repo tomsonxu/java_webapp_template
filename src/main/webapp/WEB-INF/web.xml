@@ -8,6 +8,22 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   	<servlet-name>CalculateServlet</servlet-name>
   	<servlet-class>com.tomson.mywebapp.servlet.CalculateServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>com.tomson.mywebapp.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MainPageServlet</servlet-name>
+  	<servlet-class>com.tomson.mywebapp.servlet.MainPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MainPageServlet</servlet-name>
+  	<url-pattern>/MainPageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>CalculateServlet</servlet-name>
   	<url-pattern>/CalculateServlet</url-pattern>
