@@ -7,16 +7,22 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	<!-- 
+		All Spring config files (including Spring MVC ones) are inside src/main/resource.
+		There are mostly 2 reasons to that:
+		- All Spring config files are grouped into one single place
+		- It is simpler to reference them from inside JUnit tests
+	 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring/root-context.xml</param-value>
+		<param-value>classpath:spring/business-context.xml</param-value>
 	</context-param>
 	<servlet>
 		<servlet-name>spring-servlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/servlet-context.xml</param-value>
+			<param-value>classpath:spring/mvc-context.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
